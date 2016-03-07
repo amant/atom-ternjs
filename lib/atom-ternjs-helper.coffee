@@ -119,8 +119,8 @@ class Helper
 
     if obj.type is 'string'
       obj.name = obj.name?.replace /(^"|"$)/g, ''
-    else
-      obj.name = obj.name?.replace /["']/g, ''
+    # else
+    #   obj.name = obj.name?.replace /["']/g, ''
 
     obj.type = obj.rightLabel = @prepareType(obj)
 
