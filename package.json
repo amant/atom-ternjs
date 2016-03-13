@@ -1,11 +1,11 @@
 {
-  "name": "atom-ternjs",
+  "name": "atom-jive",
   "main": "./lib/atom-ternjs",
   "version": "0.13.2",
   "private": false,
   "description": "JavaScript code intelligence for atom with Tern. Adds support for ES5, ES6 (JavaScript 2015), Node.js, jQuery & Angular. Extendable via plugins. Uses suggestion provider by autocomplete-plus.",
   "activationCommands": {},
-  "repository": "https://github.com/tststs/atom-ternjs",
+  "repository": "https://github.com/amant/atom-ternjs.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.2.0"
@@ -17,7 +17,8 @@
     "underscore-plus": "^1.6.6",
     "glob": "3",
     "minimatch": "0.2",
-    "node-uuid": "1.4.7"
+    "node-uuid": "1.4.7",
+    "tern-jive": "https://github.com/amant/tern-jive.git#0.1.0"
   },
   "providedServices": {
     "autocomplete.provider": {
