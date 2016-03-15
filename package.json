@@ -1,7 +1,7 @@
 {
   "name": "atom-jive",
   "main": "./lib/atom-ternjs",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "private": false,
   "description": "Jive framework development assistor. This is forked from atom-tern project.",
   "activationCommands": {},
