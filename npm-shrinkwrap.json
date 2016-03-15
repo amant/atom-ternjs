@@ -109,6 +109,18 @@
         }
       }
     },
+    "tern-jive": {
+      "version": "0.1.0",
+      "from": "tern-jive@0.1.0",
+      "resolved": "https://registry.npmjs.org/tern-jive/-/tern-jive-0.1.0.tgz",
+      "dependencies": {
+        "acorn": {
+          "version": "2.7.0",
+          "from": "acorn@>=2.6.4 <3.0.0",
+          "resolved": "https://registry.npmjs.org/acorn/-/acorn-2.7.0.tgz"
+        }
+      }
+    },
     "underscore-plus": {
       "version": "1.6.6",
       "from": "underscore-plus@>=1.6.6 <2.0.0",
