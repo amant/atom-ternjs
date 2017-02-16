@@ -1,6 +1,6 @@
 'use babel'
 
-let [workspaceElement, editor, editorElement] = [];
+let [workspaceElement, editor, editorElement, pack] = [];
 let path = require('path');
 
 function sharedSetup(useTernLint) {
@@ -13,7 +13,7 @@ function sharedSetup(useTernLint) {
 
     return atom.packages.activatePackage('atom-ternjs').then((pkg) => {
 
-      package = pkg.mainModule;
+      pack = pkg.mainModule;
     });
   });
 
@@ -40,18 +40,18 @@ describe('atom-ternjs', () => {
 
     it('activates atom-ternjs and initializes the autocomplete-plus provider', () => {
 
-      expect(package.provider).toBeDefined();
+      expect(pack.provider).toBeDefined();
     });
 
     it('activates atom-ternjs and initializes the manager', () => {
 
-      expect(package.manager).toBeDefined();
+      expect(pack.manager).toBeDefined();
     });
 
     it('does not provide the linter provider if tern-lint config is set to true', () => {
 
-      expect(package.useLint).toMatch(/true/);
-      expect(package.providerLinter).toBeDefined();
+      expect(pack.useLint).toMatch(/true/);
+      expect(pack.providerLinter).toBeDefined();
     });
   });
 
@@ -65,10 +65,10 @@ describe('atom-ternjs', () => {
 
     it('deactivates atom-ternjs', () => {
 
-      expect(package.manager).toBeUndefined();
-      expect(package.provider).toBeUndefined();
-      expect(package.useLint).toBeUndefined();
-      expect(package.providerLinter).toBeUndefined();
+      expect(pack.manager).toBeUndefined();
+      expect(pack.provider).toBeUndefined();
+      expect(pack.useLint).toBeUndefined();
+      expect(pack.providerLinter).toBeUndefined();
     });
 
     it('destroys all views', () => {
@@ -94,8 +94,8 @@ describe('atom-ternjs', () => {
 
     it('does not provide the linter provider if tern-lint config is set to false', () => {
 
-      expect(package.useLint).toMatch(/false/);
-      expect(package.providerLinter).toBeUndefined();
+      expect(pack.useLint).toMatch(/false/);
+      expect(pack.providerLinter).toBeUndefined();
     });
   });
 });
